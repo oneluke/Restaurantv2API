@@ -25,6 +25,11 @@ namespace Restaurantv2API.Entities
             modelBuilder.Entity<Dish>()
                 .Property(d => d.Name)
                 .IsRequired();
+
+            modelBuilder.Entity<Dish>()
+                .Property(d => d.Price)
+                .HasColumnType("decimal(18,2)");
+
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
