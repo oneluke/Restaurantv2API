@@ -27,5 +27,15 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }
-  }
+  },
+    "AllowedHosts": "localhost",
+    "Logging": {
+      "LogLevel": {
+        "Default": "Information",
+        "Microsoft.AspNetCore": "Warning"
+      }
+    },
+    "ConnectionStrings": {
+      "RestaurantDbConnection": "Server=(localdb)\\mssqllocaldb;Database=RestaurantDb;Trusted_Connection=True;"
+    }
 }

@@ -1,4 +1,6 @@
 ﻿using Restaurantv2API.Entities;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace Restaurantv2API
 {
@@ -9,7 +11,8 @@ namespace Restaurantv2API
         {
             _dbContext = dbContext;
         }
-        public void Seed()
+
+        public void Seed(RestaurantDbContext _dbContext)
         {
             if (_dbContext.Database.CanConnect())
             {
@@ -87,5 +90,6 @@ namespace Restaurantv2API
             return restaurants;
 
         }
+
     }
 }

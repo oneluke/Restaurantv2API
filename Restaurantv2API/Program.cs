@@ -25,6 +25,7 @@ namespace Restaurantv2API
             var seeder = scope.ServiceProvider.GetRequiredService<RestaurantSeeder>();
 
             seeder.Seed();
+            //seeder.Get_dbContext());
 
             if (app.Environment.IsDevelopment())
             {
